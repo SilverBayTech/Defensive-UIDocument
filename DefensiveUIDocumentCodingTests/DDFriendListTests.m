@@ -3,7 +3,20 @@
 //  DefensiveUIDocument
 //
 //  Created by Kevin Hunter on 12/31/12.
-//  Copyright (c) 2012 Silver Bay Tech. All rights reserved.
+//
+//  Copyright 2012 Kevin Hunter
+//
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
+//
+//  http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 
 #import <Foundation/Foundation.h>
@@ -45,7 +58,7 @@
     _blockCalled = YES;
 }
 
-- (void) assertBlockCalledWithin:(NSTimeInterval)timeout
+- (BOOL) blockCalledWithin:(NSTimeInterval)timeout
 {
     NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:timeout];
     while (!_blockCalled && [loopUntil timeIntervalSinceNow] > 0)
@@ -54,10 +67,10 @@
                                  beforeDate:loopUntil];
     }
     
-    STAssertTrue(_blockCalled, nil);
+    BOOL retval = _blockCalled;
     _blockCalled = NO;  // so ready for next time
+    return retval;
 }
-
 
 - (void)testSavingCreatesFile
 {
@@ -77,7 +90,7 @@
             }
      ];
     
-    [self assertBlockCalledWithin:10];
+    STAssertTrue([self blockCalledWithin:10], nil);
     
     // then the operation should succeed and a file should be created
     STAssertTrue(blockSuccess, nil);
@@ -107,7 +120,7 @@
              }
      ];
     
-    [self assertBlockCalledWithin:10];
+    STAssertTrue([self blockCalledWithin:10], nil);
     STAssertTrue(blockSuccess, nil);
     
     [document closeWithCompletionHandler:
@@ -118,7 +131,7 @@
          }
      ];
     
-    [self assertBlockCalledWithin:10];
+    STAssertTrue([self blockCalledWithin:10], nil);
     STAssertTrue(blockSuccess, nil);
     
     // when we load a new document from that file
@@ -133,7 +146,7 @@
     
     // the data should load successfully and be what we saved
     
-    [self assertBlockCalledWithin:10];
+    STAssertTrue([self blockCalledWithin:10], nil);
     STAssertTrue(blockSuccess, nil);
     
     NSArray * friends = objUnderTest.friends;

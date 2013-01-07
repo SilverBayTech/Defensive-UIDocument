@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB7EB37169222CB00425EDF /* DDFriendList2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7EB36169222CB00425EDF /* DDFriendList2.m */; };
+		0AB7EB3A1692242D00425EDF /* DDFriendList2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7EB391692242D00425EDF /* DDFriendList2Tests.m */; };
+		0AB7EB3D16923F9B00425EDF /* DDExplodingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7EB3C16923F9B00425EDF /* DDExplodingObject.m */; };
 		0AF47CC91691FE8C002164B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF47CC81691FE8C002164B1 /* UIKit.framework */; };
 		0AF47CCB1691FE8C002164B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF47CCA1691FE8C002164B1 /* Foundation.framework */; };
 		0AF47CCD1691FE8C002164B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF47CCC1691FE8C002164B1 /* CoreGraphics.framework */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AB7EB35169222CB00425EDF /* DDFriendList2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFriendList2.h; sourceTree = "<group>"; };
+		0AB7EB36169222CB00425EDF /* DDFriendList2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFriendList2.m; sourceTree = "<group>"; };
+		0AB7EB391692242D00425EDF /* DDFriendList2Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFriendList2Tests.m; sourceTree = "<group>"; };
+		0AB7EB3B16923F9B00425EDF /* DDExplodingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExplodingObject.h; sourceTree = "<group>"; };
+		0AB7EB3C16923F9B00425EDF /* DDExplodingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExplodingObject.m; sourceTree = "<group>"; };
 		0AF47CC41691FE8C002164B1 /* DefensiveUIDocumentCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefensiveUIDocumentCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF47CC81691FE8C002164B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0AF47CCA1691FE8C002164B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +129,8 @@
 				0AF47CFE1691FFB8002164B1 /* DDFriend.m */,
 				0AF47CFF1691FFB8002164B1 /* DDFriendList.h */,
 				0AF47D001691FFB8002164B1 /* DDFriendList.m */,
+				0AB7EB35169222CB00425EDF /* DDFriendList2.h */,
+				0AB7EB36169222CB00425EDF /* DDFriendList2.m */,
 				0AF47CCF1691FE8C002164B1 /* Supporting Files */,
 			);
 			path = DefensiveUIDocumentCoding;
@@ -145,7 +155,10 @@
 		0AF47CEC1691FE8D002164B1 /* DefensiveUIDocumentCodingTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AB7EB3B16923F9B00425EDF /* DDExplodingObject.h */,
+				0AB7EB3C16923F9B00425EDF /* DDExplodingObject.m */,
 				0AF47D031691FFC3002164B1 /* DDFriendListTests.m */,
+				0AB7EB391692242D00425EDF /* DDFriendList2Tests.m */,
 				0AF47CED1691FE8D002164B1 /* Supporting Files */,
 			);
 			path = DefensiveUIDocumentCodingTests;
@@ -274,6 +287,7 @@
 				0AF47CD91691FE8C002164B1 /* DDAppDelegate.m in Sources */,
 				0AF47D011691FFB8002164B1 /* DDFriend.m in Sources */,
 				0AF47D021691FFB8002164B1 /* DDFriendList.m in Sources */,
+				0AB7EB37169222CB00425EDF /* DDFriendList2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF47D041691FFC3002164B1 /* DDFriendListTests.m in Sources */,
+				0AB7EB3A1692242D00425EDF /* DDFriendList2Tests.m in Sources */,
+				0AB7EB3D16923F9B00425EDF /* DDExplodingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +353,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -358,7 +374,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -441,6 +457,7 @@
 				0AF47CF91691FE8D002164B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF47CFA1691FE8D002164B1 /* Build configuration list for PBXNativeTarget "DefensiveUIDocumentCodingTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +466,7 @@
 				0AF47CFC1691FE8D002164B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
